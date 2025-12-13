@@ -1,0 +1,292 @@
+:root {
+    --primary-color: #3498db; /* Blue */
+    --secondary-color: #2ecc71; /* Green */
+    --accent-color: #e74c3c; /* Red/Orange for alerts */
+    --bg-color: #ecf0f1; /* Light gray background */
+    --card-bg: #ffffff;
+    --text-color: #2c3e50;
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 20px;
+    margin: 0;
+}
+
+.container {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+    width: 100%;
+    max-width: 950px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--bg-color);
+    padding-bottom: 15px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* Input and Select Styling */
+input[type="text"], 
+input[type="date"], 
+input[type="number"], 
+input[type="time"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    outline: none;
+}
+
+/* Date and Time Range Styling */
+.date-range, .time-inputs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.date-range label, .time-inputs label {
+    flex-basis: 100%;
+}
+.date-range input, .time-inputs input {
+    flex-grow: 1;
+}
+.date-range span, .time-inputs span {
+    font-weight: bold;
+    color: var(--text-color);
+    flex-shrink: 0;
+}
+
+
+/* Button Styling */
+.calculate-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-top: 10px;
+}
+
+.calculate-btn:hover {
+    background-color: #27ae60;
+    transform: translateY(-1px);
+}
+
+/* Result Box and Table Styling */
+.result-box {
+    margin-top: 35px;
+    padding: 20px;
+    border: 1px solid #dcdfe3;
+    border-radius: 8px;
+    background-color: #f7f9fa;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+    overflow-x: auto;
+}
+
+.header-with-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.header-with-button h2 {
+    margin: 0;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+#payrollTable {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 850px;
+}
+
+#payrollTable thead th {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 8px;
+    text-align: center;
+    font-weight: 600;
+    border: 1px solid #2980b9;
+}
+
+#payrollTable tbody td {
+    border: 1px solid #dcdfe3;
+    padding: 10px 8px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#payrollTable tbody tr:nth-child(even) {
+    background-color: #f0f4f7;
+}
+
+/* Highlighting the Total Pay Column */
+#payrollTable tbody td:nth-child(7) { 
+    font-weight: 700;
+    color: #0d6e3c;
+    background-color: #e8f8f3;
+    border-left: 3px solid var(--secondary-color);
+}
+
+/* Action Buttons and Edit Input Styles */
+.action-col {
+    background-color: #9b59b6 !important;
+    width: 120px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+.edit-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 6px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+.edit-btn:hover {
+    background-color: #2980b9;
+}
+.delete-btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 6px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+/* Custom table input styling for edit mode */
+.editable-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.editable-input {
+    padding: 2px 5px;
+    border: 1px solid #9b59b6; 
+    border-radius: 3px;
+    font-size: 0.9em;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%; /* Ensure input fills container */
+}
+
+/* Total Pay Input specific styling */
+#payrollTable tbody td:nth-child(7) input {
+    font-weight: 700;
+    color: #0d6e3c;
+    background-color: #c9e0d9;
+}
+
+
+/* Summary Footer and Subtotal Styles */
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--primary-color), rgba(0, 0, 0, 0));
+    margin: 30px 0 20px 0;
+}
+
+.summary-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    margin-top: 15px;
+    border-top: 1px dashed #ccc;
+}
+
+.summary-total, .summary-grand-total {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+#lastCalculatedAmount {
+    font-size: 1.2em;
+    font-weight: 800;
+    color: var(--accent-color);
+    padding-left: 10px;
+}
+
+#grandTotalAmount {
+    font-size: 1.4em;
+    font-weight: 800;
+    color: var(--primary-color);
+    padding-left: 10px;
+}
+
+.sub-category-title {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+#subTotalTable {
+    width: 60%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+#subTotalTable thead th {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 12px 8px;
+    font-weight: 600;
+    border: 1px solid #27ae60;
+}
+
+#subTotalTable tbody td {
+    border: 1px solid #dcdfe3;
+    padding: 10px 8px;
+    text-align: center;
+}
+
+#subTotalTable tbody td:last-child {
+    font-weight: 800;
+    color: var(--text-color);
+    background-color: #e8f8f3;
+}

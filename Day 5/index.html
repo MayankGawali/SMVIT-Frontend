@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Payroll Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💸 Shadow/Client Pay Calculator</h1>
+        <form id="payrollForm">
+            <div class="input-group">
+                <label for="employeeName">Employee Name:</label>
+                <input type="text" id="employeeName" required>
+            </div>
+
+            <div class="input-group date-range">
+                <label>Work Period (Login Date/Day to Logout Date/Day):</label>
+                <input type="date" id="startDate" required>
+                <span>to</span>
+                <input type="date" id="endDate" required>
+            </div>
+
+            <div class="input-group time-inputs">
+                <label>Login & Logout Time (24-hour format):</label>
+                <input type="time" id="loginTime" required>
+                <span>&mdash;</span>
+                <input type="time" id="logoutTime" required>
+            </div>
+
+            <div class="input-group">
+                <label for="payRate">Pay Rate Tier:</label>
+                <select id="payRate" required>
+                    <option value="">-- Select Rate Tier --</option>
+                    <option value="male-1500">Male (₹1500 base for 14 hrs)</option>
+                    <option value="female-1800">Female (₹1800 base for 14 hrs)</option>
+                    <option value="male-1000">Male (₹1000 base for 14 hrs)</option>
+                    <option value="female-1000">Female (₹1000 base for 14 hrs)</option>
+                </select>
+            </div>
+
+            <button type="submit" class="calculate-btn">Calculate and Display Pay</button>
+        </form>
+
+        <div id="result" class="result-box">
+            <div class="header-with-button">
+                <h2>Detailed Payroll Entries:</h2>
+            </div>
+            
+            <div class="table-container">
+                <table id="payrollTable">
+                    <thead>
+                        <tr>
+                            <th>Employee</th>
+                            <th>Period & Time</th>
+                            <th>Total Hrs (Rounded)</th>
+                            <th>Base Pay (14 Hrs)</th>
+                            <th>Extra Hrs</th>
+                            <th>Extra Pay (@₹100/hr)</th>
+                            <th class="total-col">Total Pay</th>
+                            <th class="action-col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </div>
+            
+            <div class="summary-footer">
+                <p id="totalPaySummary" class="summary-total">Last Calculated Pay: <span id="lastCalculatedAmount">₹0</span></p>
+                <p id="grandTotalSummary" class="summary-grand-total">Grand Total Paid: <span id="grandTotalAmount">₹0</span></p>
+            </div>
+            
+            <hr>
+
+            <h2 class="sub-category-title">Employee Subtotals:</h2>
+            <div class="table-container">
+                <table id="subTotalTable">
+                    <thead>
+                        <tr>
+                            <th class="sub-col">Employee Name</th>
+                            <th class="sub-col">Total Pay to Employee</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
