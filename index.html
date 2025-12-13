@@ -7,36 +7,91 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Mayank Gawali's Frontend Projects</h1>
+    <div class="ribbon">Mayank</div>
 
-    <h2 style="text-align: center;">Day 1</h2>
-    <ul>
-        <li><a href="Day 1/index.html">Project</a></li>
-    </ul>
+    <div class="container">
+        <aside class="profile" aria-label="Profile">
+            <div class="avatar">
+                <img src="profile.png" alt="Mayank Gawali">
+            </div>
+            <h1>Mayank Gawali</h1>
+            <p class="role">Frontend Projects</p>
 
-    <h2 style="text-align: center;">Day 2</h2>
-    <ul>
-        <li><a href="Day 2/01 Basics/index.html">Basics</a></li>
-        <li><a href="Day 2/02 Card/card.html">Card</a></li>
-        <li><a href="Day 2/03 Timetable/index.html">Timetable</a></li>
-        <li><a href="Day 2/04 Animation/Animation.html">Animation</a></li>
-    </ul>
+            <div class="socials" aria-hidden="false">
+                <a class="btn" href="https://github.com/MayankGawali" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="btn ghost" href="https://www.linkedin.com/in/mayank-gawali-a66661313/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
 
-    <h2 style="text-align: center;">Day 3</h2>
-    <ul>
-        <li><a href="Day 3/01 Assignment/Assignment.html">Assignment</a></li>
-        <li><a href="Day 3/02 Voting/Vote.html">Voting App</a></li>
-        <li><a href="Day 3/03 Exam Pass Fail Predictor/exam.html">Exam Predictor</a></li>
-        <li><a href="Day 3/04 Background chnager/color.html">Background Changer</a></li>
-        <li><a href="Day 3/05 Love Maker/love.html">Love Maker</a></li>
-    </ul>
+            <div class="skills" aria-label="Skills">
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">Responsive Design</span>
+            </div>
+        </aside>
 
-    <h2 style="text-align: center;">Day 4</h2>
-    <ul>
-        <li><a href="Day 4/01 Assignment/event.html">Event Assignment</a></li>
-        <li><a href="Day 4/02 Jquery 1/index.html">jQuery 1</a></li>
-        <li><a href="Day 4/03 Jquery 2/index.html">jQuery 2</a></li>
-        <li><a href="Day 4/04 Flappy Bird/bird.html">Flappy Bird</a></li>
-    </ul>
+        <main class="content">
+            <section class="hero" aria-labelledby="intro-heading">
+                <h2 id="intro-heading">Hi — I'm Mayank</h2>
+                <p>Building clean, responsive frontends after completing the frontend workshop by MEVI Technologies</p>
+                <br>
+                — <a href="https://github.com/MayankGawali" target="_blank" rel="noopener noreferrer">view my projects on GitHub</a>
+                · <a class="hero-link" href="https://www.linkedin.com/in/mayank-gawali-a66661313/" target="_blank" rel="noopener noreferrer">connect on LinkedIn</a>
+                <div style="margin-top:12px;">
+                    <a class="btn" href="#contact">Get in touch</a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="projects-list-wrapper">
+        <br><br><br><br>
+        <h1>Mayank Gawali's Frontend Projects</h1>
+
+        <h2 class="day-heading">Day 1</h2>
+        <ul>
+            <li><a href="Day 1/index.html">Project</a></li>
+        </ul>
+
+        <h2 class="day-heading">Day 2</h2>
+        <ul>
+            <li><a href="Day 2/01 Basics/index.html">Basics</a></li>
+            <li><a href="Day 2/02 Card/card.html">Card</a></li>
+            <li><a href="Day 2/03 Timetable/index.html">Timetable</a></li>
+            <li><a href="Day 2/04 Animation/Animation.html">Animation</a></li>
+        </ul>
+
+        <h2 class="day-heading">Day 3</h2>
+        <ul>
+            <li><a href="Day 3/01 Assignment/Assignment.html">Assignment</a></li>
+            <li><a href="Day 3/02 Voting/Vote.html">Voting App</a></li>
+            <li><a href="Day 3/03 Exam Pass Fail Predictor/exam.html">Exam Predictor</a></li>
+            <li><a href="Day 3/04 Background chnager/color.html">Background Changer</a></li>
+            <li><a href="Day 3/05 Love Maker/love.html">Love Maker</a></li>
+        </ul>
+
+        <h2 class="day-heading">Day 4</h2>
+        <ul>
+            <li><a href="Day 4/01 Assignment/event.html">Event Assignment</a></li>
+            <li><a href="Day 4/02 Jquery 1/index.html">jQuery 1</a></li>
+            <li><a href="Day 4/03 Jquery 2/index.html">jQuery 2</a></li>
+            <li><a href="Day 4/04 Flappy Bird/bird.html">Flappy Bird</a></li>
+        </ul>
+    </div>
+    
+    <section id="contact" class="contact contact-override" aria-label="Contact">
+        <h2 style="text-align: center; color: #333; border-bottom: 2px solid #ddd; margin-bottom: 20px;">Get In Touch</h2>
+        <label for="email">Email</label>
+        <input id="email" class="input" type="email" placeholder="you@example.com">
+        <label for="message" style="margin-top:10px;">Message</label>
+        <textarea id="message" placeholder="Say hello..." ></textarea>
+        <div style="margin-top:12px; text-align:right;">
+            <button class="btn">Send</button>
+        </div>
+        <div class="footer" style="margin-top:14px;"> Mayank Gawali</div>
+    </section>
+
+    <script>
+    </script>
 </body>
 </html>
